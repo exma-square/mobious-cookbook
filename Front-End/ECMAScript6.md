@@ -6,7 +6,7 @@ ES6 標準制定的目標是為了讓 JavaScript 語言可以用來建構大型�
 ECMAScript 標準往後將計劃每年發佈一次新標準，使用年份作為標準的版本。因為當前版本的 ES6 是在 2015 年發佈的，所以又稱 ECMAScript 2015。
 
 ## ECMAScript 與 JavaScript 的關係
-ECMAScript 是 JavaScript 語言的國際標準，JavaScript 是 ECMAScript標準的實作品語言。
+ECMAScript 是 JavaScript 語言的國際標準，JavaScript 是 ECMAScript 標準的實作品語言。
 
 JavaScript 原名 LiveScript，最早是瀏覽器製造商 Netscape 公司為旗下的瀏覽器產品 Netscape Navigator 所開發來添加一些網頁效果的腳本語言，後來因為 Netscape 與 Sun 公司合作而改名成為 JavaScript。
 
