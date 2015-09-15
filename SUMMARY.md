@@ -30,5 +30,5 @@
 
 * 實作範例
   * [介紹 ─ 以Post Manager為例](Example/Intro.md)
-  * [Front-End](Example/Front-End.md)
-  * [Back-End](Example/Back-End.md)
+  * [後端（Back-End）](Example/Back-End.md)
+  * [前端（Front-End）](Example/Front-End.md)
