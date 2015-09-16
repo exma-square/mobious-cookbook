@@ -1,7 +1,7 @@
 # Model
-首先依照我們的需求總共要定義四張資料表：
+首先依照我們 Post Manager 的需求總共會需要四張資料表：[User](#User)，[Role](#Role)，[Post](#Post)，[Tag](#Tag)
 
-## User
+## User{#User}
 FilePath：`server/models/user.js`
 * `User` — 使用者帳號資料
   + username：使用者名稱（帳號）
@@ -46,7 +46,7 @@ module.exports = (sequelize, DataTypes) => {
 * `User.hasMany(models.Post)`：User 可以擁有很多個Post（一對多）
 * `User.hasMany(models.Role)`：User 可以擁有很多個Role（一對多）
 
-## Role
+## Role{#Role}
 FilePath：`server/models/role.js`
 * `Role` — 權限
   + authority：權限
@@ -70,8 +70,7 @@ FilePath：`server/models/role.js`
 #### 程式碼說明：
 * `Role.belongsTo(models.User)`：Role 是屬於 User 的，也就是說 Role 一定會有一個外鍵 User 值是 User.Id
 
-## Rost
-
+## Rost{#Post}
 FilePath：`server/models/post.js`
 * `Post` — 文章
   + content：文章內容
@@ -109,7 +108,7 @@ FilePath：`server/models/post.js`
 > 注意：如果有兩個外鍵都指向同一個 table 表，就要給予別名（as屬性）,以此範例來說有兩個 User 就要分別給別名，
 否則最後產生時只會只有一個欄位出現.
 
-## Tag
+## Tag{#Tag}
 * `Tag`— 文章標籤
 FilePath：`server/models/tag.js`
 
@@ -130,6 +129,9 @@ module.exports = (sequelize, DataTypes) => {
 ```
 #### 程式碼說明：
 * `Tag.belongsTo(models.Post)` ：每個 Tag 都一定會對應到一個Post
+
+## 參考資源
+* [Sequelize DataTypes](http://docs.sequelizejs.com/en/latest/api/datatypes/)
 
 ## 下一步
 定義完 Model 以後，接下來就是寫 [後端（Back-End）Spec](Spec.md)  確認我們的規格及測試的撰寫。

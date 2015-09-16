@@ -1,7 +1,7 @@
 # 實作範例 ─ 以Post Manager為例
 
 這篇實作範例我們會帶大家瞭解 Mobious 的架構及流程，並且如何把常見的 Post Manager 功能實際應用在 Mobious。
-再實作的過程中會先從 Post Manager 功能敘述帶家家了解後，再分兩章節後端（Back-End）與前端（Front-End）說明：
+在實作的過程中會先從 Post Manager 功能敘述帶家家了解後，再分兩章節後端（Back-End）與前端（Front-End）說明：
 
 ## Post Manager 功能說明
 ##### 一般使用者
