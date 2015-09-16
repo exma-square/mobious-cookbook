@@ -18,17 +18,17 @@
 * 刪除文章
 
 ## 後端（Back-End）範例包含：
-* [Model（sequelize）](Example/Back-End/Model.md) — 定義資料表型別及設定關聯性
-* [Spec](Example/Back-End/Spec.md) — 定義規格及測試
-* [Route](Example/Back-End/Route.md) — RESTful API 路由設定
-* [Controller](Example/Back-End/Controller.md) — 處理邏輯層
+* [Model（sequelize）](Back-End/Model.md) — 定義資料表型別及設定關聯性
+* [Spec](Back-End/Spec.md) — 定義規格及測試
+* [Route](Back-End/Route.md) — RESTful API 路由設定
+* [Controller](Back-End/Controller.md) — 處理邏輯層
 
 ## 前端（Front-End）範例包含：
-* [Route](Example/Front-End/Route.md) — 網址路由設定
-* [Auth](Example/Front-End/Auth.md) — 依照使用者權限顯可操作的功能
-* [View](Example/Front-End/View.md) — 畫面呈現頁面、CSS套用
-* [Action](Example/Front-End/Action.md) — 註冊 Action 行為、呼叫後端 RESTful API
-* [Store](Example/Front-End/Store.md) — 處理修改 State
+* [Route](Front-End/Route.md) — 網址路由設定
+* [Auth](Front-End/Auth.md) — 依照使用者權限顯可操作的功能
+* [View](Front-End/View.md) — 畫面呈現頁面、CSS套用
+* [Action](Front-End/Action.md) — 註冊 Action 行為、呼叫後端 RESTful API
+* [Store](Front-End/Store.md) — 處理修改 State
 
 ## 下一步
 瞭解完大致上的 Post Manager 架構後，接下來我們就要開始從 [後端（Back-End）Model](Back-End/Model.md) 開始撰寫。
