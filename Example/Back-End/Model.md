@@ -5,7 +5,7 @@
 
 
 
-## 簡單介紹 Sequelize{#Sequelize}
+## Sequelize{#Sequelize} 介紹
 Sequelize 是 Node.js 、 io.js 的一種 ORM（Object Relational Mapping），ORM 中文稱作「物件關係對映」
 意思是可以把物件轉換成不同資料庫語言的方法，舉例來說如果使用 MySQL 就要會 MySQL 的資料庫語法，換成 MSSQL
 就又要學 MSQQL 資料庫語法，會造成每種版本資料庫都會有不同的寫法，因此 ORM 的好處就是可以只需一種寫法，可以自動幫你轉換成不同資料庫版本的語法，
