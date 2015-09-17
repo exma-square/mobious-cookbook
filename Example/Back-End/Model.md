@@ -1,5 +1,19 @@
 # Model
-首先依照我們 Post Manager 的需求總共會需要四張資料表：[User](#User)，[Role](#Role)，[Post](#Post)，[Tag](#Tag)
+我們使用的是 [Sequelize](#Sequelize) 來設定資料表的關聯及型別，
+依照我們 Post Manager 的需求總共會需要四張資料表：[User](#User)，[Role](#Role)，[Post](#Post)，[Tag](#Tag)，
+另外在建立資料表之前還需要對 [Sequelize](#Sequelize) 有初步的認識。
+
+
+
+## 簡單介紹 Sequelize{#Sequelize}
+Sequelize 是 Node.js 、 io.js 的一種 ORM（Object Relational Mapping），ORM 中文稱作「物件關係對映」
+意思是可以把物件轉換成不同資料庫語言的方法，舉例來說如果使用 MySQL 就要會 MySQL 的資料庫語法，換成 MSSQL
+就又要學 MSQQL 資料庫語法，會造成每種版本資料庫都會有不同的寫法，因此 ORM 的好處就是可以只需一種寫法，可以自動幫你轉換成不同資料庫版本的語法，
+且也可避免攻城獅直接對資料庫進行操作，降低了物件導向與資料庫之間的耦合關係。
+
+Sequelize 目前支援 PostgreSQL、MySQL、MariaDB、SQLite、MSSQL 。
+
+
 
 ## User{#User}
 FilePath：`server/models/user.js`
@@ -105,6 +119,7 @@ FilePath：`server/models/post.js`
 * `Post.belongsTo(models.User, {as: 'Creator'}` ：設定外鍵指向 ```User```資料表並設定別名為Creator
 * `Post.belongsTo(models.User, {as: 'Editor'}` ：設定外鍵指向 ```User```資料表並設定別名為Editor
 * `Post.hasMany(models.Tag)` ：Post 可以有很多個Tag
+
 > 注意：如果有兩個外鍵都指向同一個 table 表，就要給予別名（as屬性）,以此範例來說有兩個 User 就要分別給別名，
 否則最後產生時只會只有一個欄位出現.
 
