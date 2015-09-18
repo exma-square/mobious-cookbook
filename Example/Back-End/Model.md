@@ -1,7 +1,5 @@
-# Model
-我們使用的是 [Sequelize](#Sequelize) 來設定資料表的關聯及型別，
-依照我們 Post Manager 的需求總共會需要四張資料表：[User](#User)，[Role](#Role)，[Post](#Post)，[Tag](#Tag)，
-另外在建立資料表之前還需要對 [Sequelize](#Sequelize) 有初步的認識。
+# Model 前言
+我們使用的是 [Sequelize](#Sequelize) 來設定資料表的關聯及型別，因此在建立資料表之前可以先對 [Sequelize](#Sequelize) 有初步的認識。
 
 
 
@@ -14,6 +12,8 @@ Sequelize 是 Node.js 、 io.js 的一種 ORM（Object Relational Mapping），O
 Sequelize 目前支援 PostgreSQL、MySQL、MariaDB、SQLite、MSSQL 。
 
 
+# Model 實作
+依照我們 Post Manager 的需求總共會需要四張資料表：[User](#User)，[Role](#Role)，[Post](#Post)，[Tag](#Tag)，
 
 ## User{#User}
 FilePath：`server/models/user.js`

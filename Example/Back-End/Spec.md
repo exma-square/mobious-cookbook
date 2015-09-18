@@ -1,9 +1,4 @@
-# Spec
-
-## Mocha 介紹
-Mocha 是 Node.js 的其中一套測試框架.....
-// TODO：Mocha 介紹未寫完
-
+# Spec 前言
 撰寫 Post Spec 之前可以先列出大致上會有幾種行為要寫：
 * `取得文章清單`
 * `取得單一文章`
@@ -26,7 +21,15 @@ Mocha 是 Node.js 的其中一套測試框架.....
   * `更新編輯者`
   * `上傳文章圖片`
 
+另外此篇測試也會用到 Mocha 的測試框架，讀者們可以先看以下介紹做初步的了解。
 
+## Mocha 介紹
+Mocha 是 Node.js 的其中一套測試框架.....
+// TODO：Mocha 介紹未寫完
+
+
+
+# Spec 實作
 接下來直接看程式碼比較好理解。
 
 ## 取得
@@ -227,4 +230,4 @@ describe('update post and file Upload', (done) => {
 * [Mocha](https://github.com/mochajs/mocha)
 
 ## 下一步
-依照功能需求寫 Spec 以後，接下來就是 [後端（Back-End）Route](Route.md)  定義路由。
+依照功能需求寫 Spec 以後，接下來就是 [後端（Back-End）Contorller](Controller.md)  寫入每個方法要執行的程序邏輯。
