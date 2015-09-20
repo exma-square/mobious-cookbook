@@ -31,5 +31,12 @@
 * [Action] — 註冊 Action 行為、呼叫後端 RESTful API
 * [Store] — 處理修改 State
 
+PostList
+PostOne
+PostCreate
+PostEdit
+PostDelete
+AdminSelectEditor
+
 ## 下一步
 瞭解完大致上的 Post Manager 架構後，接下來我們就要開始從 [後端（Back-End）Model](Back-End/Model.md) 開始撰寫。

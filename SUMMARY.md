@@ -37,6 +37,8 @@
     * [Route](Example/Back-End/Route.md)
   * [前端（Front-End）](Example/Front-End.md)
     * [文章清單](Example/Front-End/PostList.md)
+    * [文章瀏覽](Example/Front-End/PostSingle.md)
+    * [建立文章](Example/Front-End/PostCreate.md)
     * [Auth](Example/Front-End/Auth.md)
     * [View](Example/Front-End/View.md)
     * [Action](Example/Front-End/Action.md)

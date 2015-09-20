@@ -160,8 +160,8 @@ export default Posts;
 
 直接開始吧！
 
-#### 建立 Action 方法
-新增一個方法為 `fetch()`，並發取讀文章清單請求，如有成功回傳則傳給 `fetchSuccess` Store 。
+#### 建立 post Action
+新增一個方法為 `fetch()`，並發出讀取文章清單請求，如有成功回傳則傳給 `fetchSuccess` Store 。
 
 檔案路徑： `postManager/actions/posts.js`
 ```
@@ -202,7 +202,7 @@ export default PostsActions;
 ##### 程式碼說明：
 * `request.get(baseUrl + 'rest/post')`：發出 HTTP GET 呼救後端 API，帶入參數為網址
 
-#### 建立 Store 修改並修改 State
+#### 建立 post Store
 檔案路徑： `postManager/actions/posts.js`
 
 ```
@@ -223,14 +223,14 @@ export default PostStore;
 ```
 
 
-#### 註冊 Action 及 Store
+#### 註冊 post Action 及 Store
 檔案路徑： `utils/flux.js`
 ```
 this.addActions('posts', require('postManager/actions/posts'));
 this.addStore('posts', require('postManager/stores/posts'));
 ```
 
-#### 修改 View（讀取 State）
+#### 修改文章清單 View（讀取 State）
 檔案路徑： `postManager/components/list.js`
 
 這邊大家應該還記得我們文章清單目前是寫死的還未從資料庫取得：
@@ -371,3 +371,6 @@ export default Posts;
 * `this.props.flux.getStore('posts').listen(this._handleStoreChange)`
 
 監聽 posts store 有無任何狀態改變，如有則執行 `_handleStoreChange`
+
+## 下一步
+完成了文章清單以後，接下來實作擊文章標題時會顯示該文章的詳細內容頁 [文章瀏覽](PostSingle.md) 。
