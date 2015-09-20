@@ -30,9 +30,12 @@ class AlertButton extends React.Component {
 ```
 
 ### 虛擬 DOM
+DOM 操作的效能成本非常的高，React 為了解決開發者在手動操作 DOM 時可能造成的效能低落或失誤，建立了一套虛擬 DOM（Virtual DOM，以下簡稱VDOM）的機制，程式記憶體中將有一份對應真正 DOM 的 VDOM 物件，以代管 UI 儲存的資料與邏輯。當一個 UI 因為資料改變而需要進行畫面變動的時候，React 會根據新的 UI 狀態重繪一份新的 VDOM Tree，並且與變動前的舊 VDOM Tree 以高效率的 Diff 演算法進行比對，然後其中的差異才會真正的由 React 自動幫你更新到實際的 DOM 上，反應出畫面的變更。
+
+透過 VDOM 的機制，開發者將不必煩惱如何操作 DOM，而可以專心於撰寫 UI 的定義與互動邏輯。並且由於 React 能夠自動去最佳化的處理 DOM 操作，前端 UI 程式將可以有效的降低操作成本而達到優秀的效能。
 
 ### 組件（Component）
-為了讓 UI 能夠有更好的可組合性與可重用性，React 將所有的 UI 都視為一個一個的組件（Component），每個 Component 中定義了這個 UI 元件所要呈獻的樣貌和事件，然後透過層層嵌套與交互使用來組合出你所需要的整個 View。這意味著透過React，前端 UI 的開發將不再像過往直接撰寫 HTML 那樣雜亂無章，而是能夠更貼近於物件導向式的開發與管理，有系統的進行抽象化、封裝，甚至是繼承。
+為了讓 UI 能夠有更好的可組合性與可重用性，React 利用虛擬 DOM 的機制將 UI 在程式中都視為一個一個的組件（Component），每個 Component 中定義了這個 UI 元件所要呈獻的樣貌和事件，然後透過層層嵌套與交互使用來組合出你所需要的整個 View。這意味著透過 React，前端 UI 的開發將不再像過往直接撰寫 HTML 那樣雜亂無章，而是能夠更貼近於物件導向式的開發與管理，有系統的進行抽象化、封裝，甚至是繼承。
 
 ### JSX
 為了使開發者能夠在定義 UI 語法時更順手，Fackbook 為了 React 提供了一種看起來很像是 XML 的 JavaScript 語法擴充 ─ JSX。它對於開發 React 來說並不是強制需要的，您也可以直接使用原生的 JavaScript 語法來定義 UI。不過，XML 格式有固定的標籤開啟和閉合的優點，這能讓複雜的樹狀結構更易於閱讀，並且有利於函數調用與參數填寫，就像類似於傳統的 HTML 標籤語法那樣。
@@ -48,3 +51,14 @@ JSX 並不是一個新的語言，他更像是一種幫助開發體驗的語法�
 React.createElement("button", {id: "btn", onClick: this.handleClick}, "我是一個按鈕")
 ```
 更多關於 JSX 的詳細說明，請見 [React 官方文件的 JSX 介紹](http://facebook.github.io/react/docs/jsx-in-depth.html)。
+
+## 單向資料流 & 一律重繪
+React 的概念中認為，UI 要照什麼樣子繪製出來，應當是取決於當前的 Model 資料以及 UI 狀態而定。因此，React 對於 View 與 Model 之間採用了的是單向資料流，也是說所有 UI 的呈現都要依照 Model 目前的內容而繪製出來，當 Model 改變時，UI 應當跟著改變。
+
+**這裡指的「一律重新繪製」並不是指重繪整個畫面真正的 DOM，而是一旦 Model 資料發生改變，React 會在程式記憶體中根據最新的 Model 資料重新建立一份全新的 VDOM**，並進行運算與比較來得知何處是真正需要被更改的 DOM，進而做出最小的 DOM 變動來達成 UI 正確且高效能的更新，如此一來將能夠確保 UI 更新的正確性與單純性。
+
+然而，當 View 當中的 UI 操作會觸發 Model 資料的變更時，為了確保所有使用到這份資料的 UI 都能夠同步一致的獲得更新，我們應該將 Model 資料擺放在一個獨立於 UI Component 之外的地方，讓不同的 UI 之間能夠共同存取。在資料被操作修改之後，由於一律重繪的機制，React 將會自動根據最新的 Model 自動重繪所有 UI 的 VDOM ，並且在運算後更新到對應的 DOM。因此，這樣單向資料的流程以及一律重繪的機制將能夠確保 UI 繪製與更新的正確性與單純性 ── 只要 Model 的資料正確，UI 就會自動被更新到正確。
+
+上述中這個與 React 合作無間的單向資料流概念就是 [Flux](https://facebook.github.io/flux/)。
+
+更詳細的 Flux 概念解說，請見 [Flux ─ 單向資料流](../Flux/Data-flow.html) 章節。

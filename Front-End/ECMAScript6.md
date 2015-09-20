@@ -1,7 +1,7 @@
 # ECMAScript 6
 ECMAScript 6（以下簡稱 ES6）是 JavaScript 語言的下一代標準，已經在 2015 年 6 月正式發佈了。
 
-ES6 標準制定的目標是為了讓 JavaScript 語言可以用來建構大型且複雜的前後端應用程式，成為高活且可靠的企業級語言。
+ES6 標準制定的目標是為了讓 JavaScript 語言可以用來建構大型且複雜的前後端應用程式，成為高靈活性且可靠的企業級語言。
 
 ECMAScript 標準往後將計劃每年發佈一次新標準，使用年份作為標準的版本。因為當前版本的 ES6 是在 2015 年發佈的，所以又稱 ECMAScript 2015。
 
@@ -18,7 +18,7 @@ JavaScript 原名 LiveScript，最早是瀏覽器製造商 Netscape 公司為旗
 ### 瀏覽器端
 各家主流瀏覽器皆已經開始實作 ES6 的新功能與特性，但目前還未到完善的程度，因此我們可以使用像是 [Babel](https://babeljs.io/) 這種編譯器，幫助我們將寫好的 ES6 程式碼，轉換成瀏覽器可以正常運作無虞的 ES5 程式碼。
 
-更多Babel的細節請見 [Assets處理 ─ Babel](/Assets/Babel.html) 章節。
+更多 Babel 的細節請見 [Assets處理 ─ Babel](/Assets/Babel.html) 章節。
 
 ### 伺服器端
 Node.js 和 io.js（一個部署新功能更快的 Node.js 分支）是 ECMAScript 語言的在伺服器端環境的實現。它們目前對 ES6 的支持度比瀏覽器更高，通過它們將可以體驗更多 ES6 的功能與特性。
