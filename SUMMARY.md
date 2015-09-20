@@ -36,7 +36,7 @@
     * [Controller](Example/Back-End/Controller.md)
     * [Route](Example/Back-End/Route.md)
   * [前端（Front-End）](Example/Front-End.md)
-    * [Route](Example/Front-End/Route.md)
+    * [文章清單](Example/Front-End/PostList.md)
     * [Auth](Example/Front-End/Auth.md)
     * [View](Example/Front-End/View.md)
     * [Action](Example/Front-End/Action.md)
