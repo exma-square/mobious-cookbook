@@ -2,7 +2,7 @@
 延續前一章節的 [文章清單](Example/Front-End/PostList.md)，本章節要實作當使用者點擊文章標題以後可以瀏覽到文章的詳細內容。
 
 #### 設定文章瀏覽 Route
-一樣在 `app/routes.jsx` 加入此文章瀏覽的 URL。
+一樣在 `app/routes.jsx` 加入此文章瀏覽的 Route。
 
 檔案路徑：`app/routes.jsx`
 ```
@@ -167,4 +167,4 @@ onFetchOneSuccess(post) {
 ```
 
 ## 下一步
-完成了文章瀏覽以後，接下來實作 [文章建立](PostCreate.md) 。
+完成了文章瀏覽以後，接下來實作 [建立文章](PostCreate.md)

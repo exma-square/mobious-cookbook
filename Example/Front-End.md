@@ -9,6 +9,8 @@
 
 在實作功能之前，先瞭解目錄結構：
 app
+* components
+  * ∟ shared — 放置共用的 component
 * data
   * ∟ en.js — 英文（多國語系）
   * ∟ fr.js — 法語（多國語系）

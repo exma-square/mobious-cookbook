@@ -39,6 +39,7 @@
     * [文章清單](Example/Front-End/PostList.md)
     * [文章瀏覽](Example/Front-End/PostSingle.md)
     * [建立文章](Example/Front-End/PostCreate.md)
+    * [刪除文章](Example/Front-End/PostDelete.md)
     * [Auth](Example/Front-End/Auth.md)
     * [View](Example/Front-End/View.md)
     * [Action](Example/Front-End/Action.md)
