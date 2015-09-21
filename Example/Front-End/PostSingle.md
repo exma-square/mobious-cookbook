@@ -1,5 +1,9 @@
 #文章瀏覽
-延續前一章節的 [文章清單](Example/Front-End/PostList.md)，本章節要實作當使用者點擊文章標題以後可以瀏覽到文章的詳細內容。
+延續前一章節的 [文章清單](PostList.md)，本章節要實作當使用者點擊文章標題以後可以瀏覽到文章的詳細內容。
+
+示意圖
+
+![文章瀏覽](../Image/Article.jpeg "文章瀏覽")
 
 #### 設定文章瀏覽 Route
 一樣在 `app/routes.jsx` 加入此文章瀏覽的 Route。
@@ -167,4 +171,4 @@ onFetchOneSuccess(post) {
 ```
 
 ## 下一步
-完成了文章瀏覽以後，接下來實作 [建立文章](PostCreate.md)
+完成了文章瀏覽以後，接下來實作 [建立文章](PostCreate.md) 。

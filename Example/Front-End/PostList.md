@@ -1,4 +1,7 @@
 #文章清單
+示意圖
+
+![文章清單](../Image/ArticleList.jpeg "文章清單")
 
 #### 設定文章清單 Route
 在 `app/routes.jsx` 使用我們自定義的 `generateRoute()` 方法，
@@ -157,8 +160,6 @@ export default Posts;
 * 建立 Store 修改並修改 State
 * 註冊 Action 及 Store
 * 修改 View（讀取 State）
-
-直接開始吧！
 
 #### 建立 post Action
 新增一個方法為 `fetch()`，並發出讀取文章清單請求，如有成功回傳則傳給 `fetchSuccess` Store 。
@@ -373,4 +374,4 @@ export default Posts;
 監聽 posts store 有無任何狀態改變，如有則執行 `_handleStoreChange`
 
 ## 下一步
-完成了文章清單以後，接下來實作擊文章標題時會顯示該文章的詳細內容頁 [文章瀏覽](PostSingle.md) 。
+完成了文章清單以後，接下來實作當點擊文章標題時會顯示該文章的詳細內容頁 [文章瀏覽](PostSingle.md) 。

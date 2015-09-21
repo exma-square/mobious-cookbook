@@ -1,6 +1,10 @@
 #修改，刪除文章
 依照我們的需求，只有權限 Editor 才可以進行修改及刪除文章的動作。
 
+示意圖
+
+![Editor 文章清單檢視畫面](../Image/EditArticleView.jpeg "Editor 文章清單檢視畫面")
+
 #### 修改 Route
 在 `app/routes.jsx` 加入此文章建立的 Route。
 
@@ -16,6 +20,7 @@
 我們要再文章清單的後方加入修改及刪除按鈕，
 
 檔案路徑： `postManager/components/list.js`
+
 編輯及刪除的按鈕都是重複性的，因此我們把他抽離出來
 ```
 renderEdit(post) {
@@ -328,4 +333,4 @@ onRemoveSuccess(id) {
 ```
 
 ## 下一步
-完成了編輯，刪除文章以後，接下來實作 [Admin 指派 Editor](AdminSelectEditor.md)
+完成了編輯，刪除文章以後，接下來實作 [Admin 指派 Editor](AdminSelectEditor.md) 。

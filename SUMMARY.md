@@ -41,7 +41,3 @@
     * [建立文章](Example/Front-End/PostCreate.md)
     * [修改、刪除文章](Example/Front-End/PostEditDelete.md)
     * [Admin 指派 Editor](Example/Front-End/AdminSelectEditor.md)
-    * [Auth](Example/Front-End/Auth.md)
-    * [View](Example/Front-End/View.md)
-    * [Action](Example/Front-End/Action.md)
-    * [Store](Example/Front-End/Store.md)

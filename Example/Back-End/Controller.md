@@ -9,15 +9,13 @@
 * updateEditor — 修改文章編輯者
 * upload — 上傳圖片
 
-另外此篇有使用到 ES6 Generator 以及 Sequelize 的新增修改刪除（CRUD）語法，因此在實作以前可以先閱讀以下介紹。
+另外此篇有使用到 ES6 Generator 以及 Sequelize 的新增修改刪除（CRUD）語法，因此在實作以前可以先對 Generator 有個初步的瞭解。
 
-## Generator 介紹
-// TODO： Generator 介紹未寫完
+關於 Generator 這邊有篇不錯的文章說明
+[初探 ES6（3）Generator](http://www.codedata.com.tw/javascript/es6-3-generator/)
 
 ## Sequelize 新增修改刪除（CRUD）
-這邊介紹此範例有使用到常見的 CRUD 方法有哪些
-* [$tableName]：資料表名稱
-* [$Model]：資料的物件
+這邊介紹此範例有使用到常見的 CRUD 方法有哪些，為了方便說明以下資料表名稱將會用 $tableName 做呈現， $Model 則代表資料物件
 * `[$tableName].find({where: id: postId})`：使用 where 條件篩選資料
 * `[$tableName].findById([$id])`：使用主鍵（Id）篩選
 * `[$tableName].findAll()`：取的所有資料
@@ -33,8 +31,8 @@
 
 
 # Contorller 實作
-FilePath：server/controller/post.js
-## index
+檔案路徑：`server/controller/post.js`
+#### index
 ```
 exports.index = function *() {
 
@@ -45,11 +43,11 @@ exports.index = function *() {
   this.body = {posts}
 };
 ```
-#### 程式碼說明：
+##### 程式碼說明：
 * `yield models.Post.findAll()`：取得所有文章
 * `this.body = {posts}`：body 回傳 posts 物件
 
-## get
+#### get
 ```
 exports.get = function *() {
 
@@ -71,7 +69,7 @@ exports.get = function *() {
   this.body = {post}
 };
 ```
-#### 程式碼說明：
+##### 程式碼說明：
 * `this.params.id;`：取網址參數 id 的值
 * `where: { id: postId }`：條件篩選 id 是 postId 值
 * `include: [ { model: models.Tag ,attributes: ['name']} ]`：關聯出跟此 post 有關的 tag 表，並且只顯示出 name 欄位
@@ -134,7 +132,7 @@ exports.create = function *() {
   }
 };
 ```
-#### 程式碼說明：
+##### 程式碼說明：
 * `this.request.body`：取得 request 的 body 值
 * `services.user.getSessionUser(this)`：從 Session 中取得此用者的 Id
 * `models.Post.create(post_data);`：將 post 寫入資料庫
@@ -212,7 +210,7 @@ exports.update = function *() {
 
 };
 ```
-#### 程式碼說明：
+##### 程式碼說明：
 * `if( UserId === post.CreatorId || UserId === post.EditorId )`： 驗證使用者要是 Creator 或是 Editor 才能更改
 * `models.Tag.destroy({ where: {id: tag.id }});`：從資料庫中刪除 tag
 * `yield post.save();`：將 post 更新至資料庫
@@ -241,7 +239,7 @@ exports.delete = function *() {
     this.body = {result}
   };
 ```
-#### 程式碼說明：
+##### 程式碼說明：
 * `post.destroy()`：從資料庫中刪除此 post
 
 ## updateEditor
@@ -282,7 +280,7 @@ exports.updateEditor = function *() {
   };
 
 ```
-#### 程式碼說明：
+##### 程式碼說明：
 * 這邊比較要注意的是，因為前端是用 DropDownList 還選擇 Editor 因此如果選是預設值 value 會是 0，
 但是在 post 的欄位 Editor 是對應 User 的 Model ，因此給 0 會發生錯誤因為資料庫沒有此筆 User，所以這邊如果沒有指定 Editor 要給 null 值。
 
@@ -320,7 +318,7 @@ exports.upload = function* (next) {
   }
 };
 ```
-#### 程式碼說明：
+##### 程式碼說明：
 * `fs.ensureDirSync(dir)` 檢查路徑是否存在，如不存在則建立。
 * `Math.floor()` 回傳整數
 * `Math.random()` 0 ~ 0.9999999(無窮小數)
@@ -330,4 +328,4 @@ exports.upload = function* (next) {
 * [co-busboy](https://github.com/mscdex/busboy)
 
 ## 下一步
-Contorller 完成以後，接下來後端剩下設定 [後端（Back-End）Route](Route.md) 後，外部就可以使用 URI 來對資料進行操作了。
+Contorller 完成以後，接下來後端剩下設定 [後端（Back-End）Route](Route.md) 後，外部就可以使用 URI 來對資料進行操作了 。

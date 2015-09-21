@@ -1,6 +1,10 @@
 #建立文章
 在文章建立這章節比較特別是，權限必須要是 Editor 才能進行文章的建立。
 
+示意圖
+
+![建立文章](../Image/ArticleCreate.jpeg "建立文章")
+
 #### 設定文章建立 Route
 在 `app/routes.jsx` 加入此文章建立的 Route。
 
@@ -302,4 +306,4 @@ onCreateSuccess(post) {
 ```
 
 ## 下一步
-完成了建立文章以後，接下來實作 [修改文章](PostEditDelete.md)
+完成了建立文章以後，接下來實作 [修改文章](PostEditDelete.md) 。

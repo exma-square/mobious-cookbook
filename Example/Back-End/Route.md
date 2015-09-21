@@ -10,7 +10,7 @@
 ```import Router from 'koa-router';```
 
 
-FilePath：`server/contorllers/index.js`
+檔案路徑：`server/contorllers/index.js`
 
 ```
 var publicRoute = new Router()
@@ -22,7 +22,9 @@ setupPublicRoute() {
 ```
 
 另外這邊大家應該有發現 Create，Update，Delete 的方法怎麼會沒有寫在這邊？
-因為 Create，Update，Delete 這些方法算是都需要驗證登入過的使用者才能使用，
+因為 Create，Update，Delete 這些方法算是都需要驗證登入過的使用者才能使用。
+
+
 因此我們把他抽離出來，當有驗證登入過得使用者才能使用這些 URI 如下：
 
 
@@ -80,3 +82,4 @@ controllers.setupAppRoute()
 當 `setupPublicRoute()` 內的方有 next 才會繼續往下執行 `setupAppRoute()`，因此可以避免到未登入者連到 `setupAppRoute()` 內所設定的 URI。
 
 ## 下一步
+後端（Back-End）已經完成了，讓我們在繼續學習 [前端（Front-End）](../Front-End.md) 。

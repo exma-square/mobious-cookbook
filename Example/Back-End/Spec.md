@@ -24,19 +24,22 @@
 另外此篇測試也會用到 Mocha 的測試框架，讀者們可以先看以下介紹做初步的了解。
 
 ## Mocha 介紹
-Mocha 是 Node.js 的其中一套測試框架.....
-// TODO：Mocha 介紹未寫完
+Mocha 是 Node.js 的其中一套測試框架，支援 BDD（Behavior Driven Development） TDD（Test Driven Development），
+這邊我們會偏向使用 BDD 的方式來做，每個 test cast 都會有一個 `describe()`，來敘述測試的情境（scenario），
+之後在把驗證結果放在 `it()` 裡。
+
+詳細可參考：[mochajs - 官網](https://mochajs.org/)
 
 
 
-# Spec 實作
+## Spec 實作
 接下來直接看程式碼比較好理解。
 
-## 取得
+### 取得
   * `取得文章清單（index all post）`
   * `取得單一文章（find single post）`
 
-FilePath：`server/controllers/post.spec.js`
+檔案路徑：`server/controllers/post.spec.js`
 ```
 describe('find one and all', (done) => {
 
@@ -70,7 +73,7 @@ describe('find one and all', (done) => {
 
   });
 ```
-### 程式碼說明：
+##### 程式碼說明：
 * 首先我們先定義了一個情境描述（describe） `'find one and all'` 裡頭包含了兩個具體描述（it） 分別為 `index all post`，`find single post`
 * 在 `index all post` 裡先規劃好我們要取得所有文章的 URI 是 `request.get("/rest/post/")` 並且使用 HTTP GET 。
 * `.expect(200)` 如果 HTTP Status code 成功回傳 200
@@ -83,7 +86,7 @@ describe('find one and all', (done) => {
 
 
 
-## 建立刪除
+### 建立刪除
   * `建立文章`
   * `刪除文章`
 
@@ -140,12 +143,12 @@ describe('create and delete a post', () => {
       });
   });
 ```
-### 程式碼說明：
+##### 程式碼說明：
 * `request.post('/rest/post/')` 設定請求 URI，並且使用 HTTP POST 發出請求
 * `result.title.should.equal(seedPost.title)` 驗證回傳直的 result.title 是否等於為當初建立的值（seedPost.title）
 * `request.delete("/rest/post/" + postId)` 設定請求 URI，並且使用 HTTP DELETE 發出請求
 
-## 更新
+### 更新
   * `更新文章`（update post）
   * `更新編輯者`（update post editor）
   * `上傳文章圖片`（file Upload）
@@ -221,13 +224,13 @@ describe('update post and file Upload', (done) => {
     });
   });
 ```
-### 程式碼說明：
+##### 程式碼說明：
 * `include: [ { model: models.Tag } ]`  關聯出跟此 post 有關聯的 tag
 * `.attach('file', 'test/server/resources/mobious.png')`  附加圖片檔案
 
 ## 參考資源
-* [sinonjs](http://sinonjs.org/)
-* [Mocha](https://github.com/mochajs/mocha)
+* [sinonjs - 官網](http://sinonjs.org/)
+* [mochajs - GitHub](https://github.com/mochajs/mocha)
 
 ## 下一步
-依照功能需求寫 Spec 以後，接下來就是 [後端（Back-End）Contorller](Controller.md)  寫入每個方法要執行的程序邏輯。
+依照功能需求寫 Spec 以後，接下來就是 [後端（Back-End）Contorller](Controller.md)  寫入每個方法要執行的程序邏輯 。

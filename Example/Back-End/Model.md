@@ -13,11 +13,11 @@ Sequelize 目前支援 PostgreSQL、MySQL、MariaDB、SQLite、MSSQL 。
 
 
 # Model 實作
-依照我們 Post Manager 的需求總共會需要四張資料表：[User](#User)，[Role](#Role)，[Post](#Post)，[Tag](#Tag)，
+依照我們 Post Manager 的需求總共會需要四張資料表：[User](#User)，[Role](#Role)，[Post](#Post)，[Tag](#Tag)。
 
 ## User{#User}
-FilePath：`server/models/user.js`
-* `User` — 使用者帳號資料
+檔案路徑：`server/models/user.js`
+* `User` — 使用者帳號資料表
   + username：使用者名稱（帳號）
   + gender：性別
   + email：電子郵件
@@ -53,7 +53,7 @@ module.exports = (sequelize, DataTypes) => {
   return User;
 };
 ```
-#### 程式碼說明：
+##### 程式碼說明：
 * `username: DataTypes.STRING`：username 為 STRING 型別
 * `picture: DataTypes.TEXT,`：picture 為 TEXT 型別
 * `activated: DataTypes.BOOLEAN`：activated 為 BOOLEAN 型別
@@ -61,8 +61,8 @@ module.exports = (sequelize, DataTypes) => {
 * `User.hasMany(models.Role)`：User 可以擁有很多個Role（一對多）
 
 ## Role{#Role}
-FilePath：`server/models/role.js`
-* `Role` — 權限
+檔案路徑：`server/models/role.js`
+* `Role` — 權限表
   + authority：權限
   + User（FK）：使用者
 
@@ -81,12 +81,12 @@ FilePath：`server/models/role.js`
     return Role;
   };
 ```
-#### 程式碼說明：
+##### 程式碼說明：
 * `Role.belongsTo(models.User)`：Role 是屬於 User 的，也就是說 Role 一定會有一個外鍵 User 值是 User.Id
 
 ## Rost{#Post}
-FilePath：`server/models/post.js`
-* `Post` — 文章
+檔案路徑：`server/models/post.js`
+* `Post` — 文章表
   + content：文章內容
   + title：文章名稱
   + img：圖片
@@ -115,7 +115,7 @@ FilePath：`server/models/post.js`
     return Post;
   };
   ```
-#### 程式碼說明：
+##### 程式碼說明：
 * `Post.belongsTo(models.User, {as: 'Creator'}` ：設定外鍵指向 ```User```資料表並設定別名為Creator
 * `Post.belongsTo(models.User, {as: 'Editor'}` ：設定外鍵指向 ```User```資料表並設定別名為Editor
 * `Post.hasMany(models.Tag)` ：Post 可以有很多個Tag
@@ -142,11 +142,11 @@ module.exports = (sequelize, DataTypes) => {
   return Tag;
 };
 ```
-#### 程式碼說明：
+##### 程式碼說明：
 * `Tag.belongsTo(models.Post)` ：每個 Tag 都一定會對應到一個Post
 
 ## 參考資源
 * [Sequelize DataTypes](http://docs.sequelizejs.com/en/latest/api/datatypes/)
 
 ## 下一步
-定義完 Model 以後，接下來就是寫 [後端（Back-End）Spec](Spec.md)  確認我們的規格及測試的撰寫。
+定義完 Model 以後，接下來就是寫 [後端（Back-End）Spec](Spec.md)  確認我們的規格及測試的撰寫 。

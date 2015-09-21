@@ -8,6 +8,7 @@
 * [Store] — 處理修改 State
 
 在實作功能之前，先瞭解目錄結構：
+
 app
 * components
   * ∟ shared — 放置共用的 component
@@ -21,8 +22,9 @@ app
   * ∟ components — 元件（渲染出網頁的元件，可以想成是 View）
   * ∟ stores — Store 接收（監聽） Action 傳來的的值，並專注於處理修改狀態（State）
   * ∟ styles  — CSS 檔案
+* routes.jsx — 路由設置
 
-說明：postManager 資料夾處理有關 post 事件。
+>postManager 資料夾是放置有關 post 事件。
 
 ## 下一步
-接下來建立 [文章清單](Front-End/PostList.md)，
+瞭解完大致上的目錄結構後，接下來開始建立 [文章清單](Front-End/PostList.md) 。
