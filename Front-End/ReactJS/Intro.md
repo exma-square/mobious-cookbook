@@ -9,7 +9,7 @@ React 本身並不是一個完整的 MVC 框架，最多可以說是 MVC 中的 
 因此，比起單純的庫或框架，React 更像是一個只定義好骨幹的開放性生態系，靠著 Facebook 官方以及技術社群的力量共同成長茁壯。
 
 ## 聲明式的定義前端 UI
-為了讓基於 HTML 所建構出來的 UI 能夠有良好的可組合性和可重用性，React 決定捨定傳統的 HTML 開發模式，改由 JavaScript 來全面代管 HTML 的渲染與 DOM 操作。
+為了讓基於 HTML 所建構出來的 UI 能夠有良好的可組合性和可重用性，React 決定捨棄傳統的 HTML 開發模式，改由 JavaScript 來全面代管 HTML 的渲染與 DOM 操作。
 
 開發者不必再先寫好 HTML 的基礎結構後再使用 JavaScript 來手動操作這些 HTML DOM 的變更，而是將該如何組合與渲染你的 UI 以及 UI 會有的互動事件，都聲明在 JavaScript 程式碼中，然後 React 會根據你的定義將其動態的產生並操作真正的 HTML DOM，以實現 UI 畫面的渲染與變更。
 
@@ -30,7 +30,7 @@ class AlertButton extends React.Component {
 ```
 
 ### 虛擬 DOM
-DOM 操作的效能成本非常的高，React 為了解決開發者在手動操作 DOM 時可能造成的效能低落或失誤，建立了一套虛擬 DOM（Virtual DOM，以下簡稱VDOM）的機制，程式記憶體中將有一份對應真正 DOM 的 VDOM 物件，以代管 UI 儲存的資料與邏輯。當一個 UI 因為資料改變而需要進行畫面變動的時候，React 會根據新的 UI 狀態重繪一份新的 VDOM Tree，並且與變動前的舊 VDOM Tree 以高效率的 Diff 演算法進行比對，然後其中的差異才會真正的由 React 自動幫你更新到實際的 DOM 上，反應出畫面的變更。
+DOM 操作的效能成本非常的高，React 為了解決開發者在手動操作 DOM 時可能造成的效能低落或失誤，建立了一套虛擬 DOM（Virtual DOM，以下簡稱 VDOM）的機制，程式記憶體中將有一份對應真正 DOM 的 VDOM 物件，以代管 UI 儲存的資料與邏輯。當一個 UI 因為資料改變而需要進行畫面變動的時候，React 會根據新的 UI 狀態重繪一份新的 VDOM Tree，並且與變動前的舊 VDOM Tree 以高效率的 Diff 演算法進行比對，然後其中的差異才會真正的由 React 自動幫你更新到實際的 DOM 上，反應出畫面的變更。
 
 透過 VDOM 的機制，開發者將不必煩惱如何操作 DOM，而可以專心於撰寫 UI 的定義與互動邏輯。並且由於 React 能夠自動去最佳化的處理 DOM 操作，前端 UI 程式將可以有效的降低操作成本而達到優秀的效能。
 
