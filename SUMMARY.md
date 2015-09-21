@@ -14,6 +14,7 @@
       * [Store](Front-End/Flux/ALT/Store.md)
   * [Isomorphic](Front-End/Isomorphic.md)
   * Assets 處理
+    * [ES6 模組](Front-End/Assets/ES6-Module.md)
     * [Webpack](Front-End/Assets/Webpack.md)
     * [Babel](Front-End/Assets/Babel.md)
     * [BrowserSync](Front-End/Assets/BrowserSync.md)
