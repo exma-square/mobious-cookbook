@@ -306,4 +306,4 @@ onCreateSuccess(post) {
 ```
 
 ## 下一步
-完成了建立文章以後，接下來實作 [修改文章](PostEditDelete.md) 。
+完成了建立文章以後，接下來實作 [修改文章](PostEditDelete.html) 。

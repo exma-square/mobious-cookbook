@@ -27,4 +27,4 @@ app
 >postManager 資料夾是放置有關 post 事件。
 
 ## 下一步
-瞭解完大致上的目錄結構後，接下來開始建立 [文章清單](Front-End/PostList.md) 。
+瞭解完大致上的目錄結構後，接下來開始建立 [文章清單](Front-End/PostList.html) 。

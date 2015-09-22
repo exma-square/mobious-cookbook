@@ -215,6 +215,9 @@ exports.update = function *() {
 * `models.Tag.destroy({ where: {id: tag.id }});`：從資料庫中刪除 tag
 * `yield post.save();`：將 post 更新至資料庫
 
+另外可以發現這邊是使用 map ，像是 `yield post.Tags.map((tag)....`，因為 map 是會有返回值的，所以可以讓控制權交給 yield 來掌管流程，
+若是用 forEach 是不會返回任何值，因此沒辦法掌管流程，這邊要特別注意一下。
+
 ## delete
 ```
 exports.delete = function *() {
@@ -328,4 +331,4 @@ exports.upload = function* (next) {
 * [co-busboy](https://github.com/mscdex/busboy)
 
 ## 下一步
-Contorller 完成以後，接下來後端剩下設定 [後端（Back-End）Route](Route.md) 後，外部就可以使用 URI 來對資料進行操作了 。
+Contorller 完成以後，接下來後端剩下設定 [後端（Back-End）Route](Route.html) 後，外部就可以使用 URI 來對資料進行操作了 。

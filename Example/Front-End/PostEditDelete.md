@@ -333,4 +333,4 @@ onRemoveSuccess(id) {
 ```
 
 ## 下一步
-完成了編輯，刪除文章以後，接下來實作 [Admin 指派 Editor](AdminSelectEditor.md) 。
+完成了編輯，刪除文章以後，接下來實作 [Admin 指派 Editor](AdminSelectEditor.html) 。

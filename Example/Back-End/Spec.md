@@ -228,9 +228,13 @@ describe('update post and file Upload', (done) => {
 * `include: [ { model: models.Tag } ]`  關聯出跟此 post 有關聯的 tag
 * `.attach('file', 'test/server/resources/mobious.png')`  附加圖片檔案
 
+這邊引用了一個輔助單元測試的 [sinonjs](http://sinonjs.org/) 函式厙，因為在測試的方法中我們有可能需要去跟後端 Service 請求數據或者用到外部的 Object，
+但這個測試的方法並不是在測試 Service 或者外部的 Object，而是要專注於測試 function 邏輯，
+所以可以用 `sinon.stub()` 來模擬一個假數據的返回，這樣的做法可以減少此單元測試的依賴性。
+
 ## 參考資源
 * [sinonjs - 官網](http://sinonjs.org/)
 * [mochajs - GitHub](https://github.com/mochajs/mocha)
 
 ## 下一步
-依照功能需求寫 Spec 以後，接下來就是 [後端（Back-End）Contorller](Controller.md)  寫入每個方法要執行的程序邏輯 。
+依照功能需求寫 Spec 以後，接下來就是 [後端（Back-End）Contorller](Controller.html)  寫入每個方法要執行的程序邏輯 。

@@ -46,8 +46,8 @@ setupAppRoute() {
 import PostController from './post';
 import Router from 'koa-router';
 
-var publicRoute = new Router()
 setupPublicRoute() {
+  var publicRoute = new Router()
   publicRoute.get('/rest/post/', PostController.index);
   publicRoute.get('/rest/post/:id', PostController.get);
   app.use(publicRoute.middleware())
@@ -82,4 +82,4 @@ controllers.setupAppRoute()
 當 `setupPublicRoute()` 內的方有 next 才會繼續往下執行 `setupAppRoute()`，因此可以避免到未登入者連到 `setupAppRoute()` 內所設定的 URI。
 
 ## 下一步
-後端（Back-End）已經完成了，讓我們在繼續學習 [前端（Front-End）](../Front-End.md) 。
+後端（Back-End）已經完成了，讓我們在繼續學習 [前端（Front-End）](../Front-End.html) 。

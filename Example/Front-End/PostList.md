@@ -373,5 +373,44 @@ export default Posts;
 
 監聽 posts store 有無任何狀態改變，如有則執行 `_handleStoreChange`
 
+
+
+另外從以上程式碼，可以發現我們在為什麼我們在 state 去跟 store 取資料，
+這跟 `componentWillMount()` 內的函式有什麼差別。
+
+```
+state = {
+    posts: this.props.flux
+    .getStore('posts')
+    .getState().posts
+  };
+
+  componentWillMount() {
+    this.props.flux
+    .getActions('page-title')
+    .set(this._getIntlMessage('postManager.page-title'));
+    this.props.flux
+    .getActions('posts')
+    .fetch();
+  }
+
+```
+
+因為 isomorphic 的關西，使用者（Client）造訪網頁的第一次都會由 server side render，
+才傳給使用者（Client），因此我們要先設定好 state 的相關的狀態，
+否則使用者（Client）第一次造訪網頁時會沒辦法正確取得內容資料。
+
+另外除了第一次造訪網頁會由 server side render ，
+之後使用者在操作或轉換畫面頁面都是由 Client 的 JavaScript 去渲染（render）網頁。
+
+由 server side render 優點是：
+* SEO友好 — 傳統爬蟲是不會去執行 JavaScript 的內容，雖然現在 Google 爬蟲已經可以支援，
+但如果比較其次的搜尋引擎，就會沒辦法正確抓取到網頁的內容。
+* 速度快 — 因為是由 server side render 好才傳給使用者（Client），因此會比先把 JavaScript 丟給 Client
+在由 JavaScript 去跟 Server 取資料再渲染（render）來的快。
+
+
+
+
 ## 下一步
-完成了文章清單以後，接下來實作當點擊文章標題時會顯示該文章的詳細內容頁 [文章瀏覽](PostSingle.md) 。
+完成了文章清單以後，接下來實作當點擊文章標題時會顯示該文章的詳細內容頁 [文章瀏覽](PostSingle.html) 。

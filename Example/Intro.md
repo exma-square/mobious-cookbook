@@ -18,19 +18,19 @@
 
 ## 後端（Back-End）範例包含
 後端（Back-End）會以架構導向實作。
-* [Model（sequelize）](Back-End/Model.md) — 定義資料表型別及設定關聯性
-* [Spec](Back-End/Spec.md) — 定義規格及測試
-* [Controller](Back-End/Controller.md) — 處理邏輯層
-* [Route](Back-End/Route.md) — RESTful API 路由設定
+* [Model（sequelize）](Back-End/Model.html) — 定義資料表型別及設定關聯性
+* [Spec](Back-End/Spec.html) — 定義規格及測試
+* [Controller](Back-End/Controller.html) — 處理邏輯層
+* [Route](Back-End/Route.html) — RESTful API 路由設定
 
 
 ## 前端（Front-End）範例包含：
 前端（Front-End）會以功能導向實作。
-* [文章清單](Front-End/PostList.md)
-* [文章瀏覽](Front-End/PostSingle.md)
-* [建立文章](Front-End/PostCreate.md)
-* [修改、刪除文章](Front-End/PostEditDelete.md)
-* [Admin 指派 Editor](Front-End/AdminSelectEditor.md)
+* [文章清單](Front-End/PostList.html)
+* [文章瀏覽](Front-End/PostSingle.html)
+* [建立文章](Front-End/PostCreate.html)
+* [修改、刪除文章](Front-End/PostEditDelete.html)
+* [Admin 指派 Editor](Front-End/AdminSelectEditor.html)
 
 以上功能都含括：
 * [Route] — 網址路由設定
@@ -53,4 +53,4 @@
 | Route | 路由 |
 
 ## 下一步
-瞭解完大致上的 Post Manager 架構後，接下來我們就要開始從 [後端（Back-End）Model](Back-End/Model.md) 開始撰寫 。
+瞭解完大致上的 Post Manager 架構後，接下來我們就要開始從 [後端（Back-End）Model](Back-End/Model.html) 開始撰寫 。

@@ -149,4 +149,4 @@ module.exports = (sequelize, DataTypes) => {
 * [Sequelize DataTypes](http://docs.sequelizejs.com/en/latest/api/datatypes/)
 
 ## 下一步
-定義完 Model 以後，接下來就是寫 [後端（Back-End）Spec](Spec.md)  確認我們的規格及測試的撰寫 。
+定義完 Model 以後，接下來就是寫 [後端（Back-End）Spec](Spec.html)  確認我們的規格及測試的撰寫 。
