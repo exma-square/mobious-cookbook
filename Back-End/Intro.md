@@ -119,3 +119,6 @@ koa.listen(3000);
 ##參考資料
 * [Koa.js Github](https://github.com/koajs/koa/)
 * [Koa.js Middleware（中間件）](https://github.com/koajs/koa/wiki#Middleware)
+
+## 下一步
+使用 koa-route 設定路由 [API Route](API-Route.md)

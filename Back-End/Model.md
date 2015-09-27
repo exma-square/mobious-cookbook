@@ -115,3 +115,6 @@ User.update({
 ##參考資料
 * [Sequelize 官網](http://sequelize.readthedocs.org/en/latest/)
 * [Sequelize DataTypes](http://docs.sequelizejs.com/en/latest/api/datatypes/)
+
+## 下一步
+[Controller](Controller.md)

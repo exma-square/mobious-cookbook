@@ -55,3 +55,6 @@ router.get('user','/users/:id', function *(next) {
 
 ##參考資料
 * [koa-router Github](https://github.com/alexmingoia/koa-router)
+
+## 下一步
+[Model ─ Sequelize](Model.md)
