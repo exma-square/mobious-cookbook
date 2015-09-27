@@ -5,6 +5,10 @@
 [Koa.js](https://github.com/koajs/koa/)  大量運用到利用了 ES6 裡 Generator 新特性，Generator 可以減輕開發人員在流程管理上有更多的彈性，
 因為以往 JavaScript 在有很多 callback 時會成很多層的嵌套高山，會造成讓開發人員在處理上會難以掌握。
 
+##安裝
+`npm install koa --save`
+
+##使用
 先來一個基本的 Hello World（你好世界）：
 ```
 var app = require('koa')();
@@ -108,6 +112,9 @@ koa.listen(3000);
 如果你可以掌握以上程式碼的印出順序，代表你已經瞭解如何在 Koa.js 控制流程了。
 
 答案(請反白)：『<font color='white'>A，B，D，F，C</font>』
+
+在 Koa.js 的官網也有一張說明流程圖，非常的清楚也可以做參考[來源連結](http://koajs.in/doc/Middleware/guide/)：
+![Middleware](../Image/middleware.gif "Middleware")
 
 ##參考資料
 * [Koa.js Github](https://github.com/koajs/koa/)
