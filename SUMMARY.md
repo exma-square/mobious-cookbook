@@ -22,8 +22,8 @@
     * [Koa 介紹](Back-End/Koa/Intro.md)
     * [API Route](Back-End/Koa/API-Route.md)
     * [Controller](Back-End/Koa/Controller.md)
-    * [Model ─ Sequelize](Back-End/Koa/Model.md)
     * [Isomorphic Interface](Back-End/Koa/Isomorphic-Interface.md)
+  * [Model ─ Sequelize](Back-End/Model.md)
   * Testing
     * [Migration & Seeding](Back-End/Testing/Migration&Testing.md)
     * [Mocha](Back-End/Testing/Mocha.md)

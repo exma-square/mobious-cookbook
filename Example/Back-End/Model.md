@@ -1,15 +1,6 @@
 # Model 前言
-我們使用的是 [Sequelize](#Sequelize) 來設定資料表的關聯及型別，因此在建立資料表之前可以先對 [Sequelize](#Sequelize) 有初步的認識。
+我們使用的是 [Sequelize](#Sequelize) 來設定資料表的關聯及型別，因此在建立資料表之前可以先瀏覽 [Model ─ Sequelize](../../Back-End/Model.md) 此章節做個初步的認識。
 
-
-
-## Sequelize{#Sequelize} 介紹
-Sequelize 是 Node.js 、 io.js 的一種 ORM（Object Relational Mapping），ORM 中文稱作「物件關係對映」
-意思是可以把物件轉換成不同資料庫語言的方法，舉例來說如果使用 MySQL 就要會 MySQL 的資料庫語法，換成 MSSQL
-就又要學 MSQQL 資料庫語法，會造成每種版本資料庫都會有不同的寫法，因此 ORM 的好處就是可以只需一種寫法，可以自動幫你轉換成不同資料庫版本的語法，
-且也可避免攻城獅直接對資料庫進行操作，降低了物件導向與資料庫之間的耦合關係。
-
-Sequelize 目前支援 PostgreSQL、MySQL、MariaDB、SQLite、MSSQL 。
 
 
 # Model 實作

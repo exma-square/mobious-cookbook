@@ -52,3 +52,6 @@ router.get('user','/users/:id', function *(next) {
     this.body = this.params.id;
   })
 ```
+
+##參考資料
+* [koa-router Github](https://github.com/alexmingoia/koa-router)
