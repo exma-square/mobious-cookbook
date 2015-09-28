@@ -1,10 +1,10 @@
 # Controller
 在此章節，會先讓您對 mobious 後端 Controller 架構方向有個概念性瞭解，並不會太深入去講解程式碼，詳細程式碼的講解會留到
-[Example 實作](../Example/Intro.md) 才會做做深入探討。
+[Example](../Example/Intro.html) 實作才會做做深入探討。
 
 在 mobious 後端的 Controller 會使用到 koa-route 以及 Sequelize ，因此會先建議您閱讀以下兩章節
-* [Model ─ Sequelize](Model.md)
-* [API Route](Koa/API-Route.md)
+* [Model ─ Sequelize](Model.html)
+* [API Route](API-Route.html)
 
 mobious 後端的目錄架構：
 

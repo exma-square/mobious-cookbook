@@ -1,4 +1,6 @@
 # API Route
+使用 koa-router 建立路由。
+
 ##安裝
 `npm install koa-router --save`
 
@@ -57,4 +59,4 @@ router.get('user','/users/:id', function *(next) {
 * [koa-router Github](https://github.com/alexmingoia/koa-router)
 
 ## 下一步
-[Model ─ Sequelize](Model.md)
+[Model ─ Sequelize](Model.html)
