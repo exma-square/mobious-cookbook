@@ -1,9 +1,19 @@
 # Model 前言
 我們使用的是 [Sequelize](#Sequelize) 來設定資料表的關聯及型別，因此在建立資料表之前可以先瀏覽 [Model ─ Sequelize](../../Back-End/Model.md) 此章節做個初步的認識。
 
+server
+* config
+  * ∟ development.js — 資料庫連線設定檔（開發環境）
+  * ∟ production.js — 資料庫連線設定檔（生產環境）
+  * ∟ init.js — server 連線資訊設定檔（domain、url、port）
+* models
+  * ∟ user.js — 使用者資料表
+  * ∟ role.js — 權限資料表
+  * ∟ post.js — 文章資料表
+  * ∟ tag.js — 文章標籤資料表
 
 
-# Model 實作
+## Model 實作
 依照我們 Post Manager 的需求總共會需要四張資料表：[User](#User)，[Role](#Role)，[Post](#Post)，[Tag](#Tag)。
 
 ## User{#User}
@@ -135,6 +145,25 @@ module.exports = (sequelize, DataTypes) => {
 ```
 ##### 程式碼說明：
 * `Tag.belongsTo(models.Post)` ：每個 Tag 都一定會對應到一個Post
+
+## 資料庫連線設定
+在 config 資料夾底下有兩個 development.js 及 production.js ，分別對應開發環境及生產環境的資料庫連線資訊，
+在開發環境中我們是使用 sqlite 來做本機資料庫。
+
+檔案路徑：`server/config/development.js`
+```
+export default {
+  port: parseInt(process.env.PORT, 10) || 3000,
+  'connection': {
+    'dialect': 'sqlite',
+    'storage': './db.development.sqlite',
+    'username': null,
+    'password': null,
+    'database': null,
+    'force': true
+  }
+};
+```
 
 ## 參考資源
 * [Sequelize DataTypes](http://docs.sequelizejs.com/en/latest/api/datatypes/)
