@@ -117,4 +117,4 @@ User.update({
 * [Sequelize DataTypes](http://docs.sequelizejs.com/en/latest/api/datatypes/)
 
 ## 下一步
-[Controller](Controller.md)
+[Controller](Controller.html)

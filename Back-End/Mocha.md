@@ -170,4 +170,4 @@ describe("User", () => {
 
 
 ## 下一步
-[介紹 ─ 以Post Manager為例](../../Example/Intro.html)
+[介紹 ─ 以Post Manager為例](../Example/Intro.html)

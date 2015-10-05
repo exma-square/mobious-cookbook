@@ -17,14 +17,13 @@
     * [Webpack](Front-End/Assets/Webpack.md)
     * [Babel](Front-End/Assets/Babel.md)
     * [BrowserSync](Front-End/Assets/BrowserSync.md)
-* Back-End 核心技術
-  * [Koa 介紹](Back-End/Intro.md)
+* [Back-End 核心技術](Back-End/Intro.md)
+  * [Koa 介紹](Back-End/Koa.md)
   * [API Route](Back-End/API-Route.md)
   * [Model ─ Sequelize](Back-End/Model.md)
   * [Controller](Back-End/Controller.md)
-  * Testing
-    * [Seeding](Back-End/Testing/Seeding.md)
-    * [Mocha ─ API Testing](Back-End/Testing/Mocha.md)
+  * [Seeding](Back-End/Seeding.md)
+  * [Mocha ─ API Testing](Back-End/Mocha.md)
 
 * 實作範例
   * [介紹 ─ 以Post Manager為例](Example/Intro.md)

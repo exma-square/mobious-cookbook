@@ -74,3 +74,6 @@ publicRoute.get('/rest/post/:id', PostController.get);
 this.router.post('/rest/user/', UserController.create);
 
 ```
+
+## 下一步
+[Seeding](Seeding.html)
