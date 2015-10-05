@@ -23,8 +23,8 @@
   * [Model ─ Sequelize](Back-End/Model.md)
   * [Controller](Back-End/Controller.md)
   * Testing
-    * [Migration & Seeding](Back-End/Testing/Migration&Testing.md)
-    * [Mocha](Back-End/Testing/Mocha.md)
+    * [Seeding](Back-End/Testing/Seeding.md)
+    * [Mocha ─ API Testing](Back-End/Testing/Mocha.md)
 
 * 實作範例
   * [介紹 ─ 以Post Manager為例](Example/Intro.md)

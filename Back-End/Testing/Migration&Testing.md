@@ -1,3 +1,0 @@
-# Migration & Seeding
-## Migration
-## Seeding
