@@ -1,6 +1,6 @@
 # Koa 介紹
 
-[Koa.js](https://github.com/koajs/koa/) 是 Node.js 下一代的 web 框架，是由 [Express](https://github.com/strongloop/express) 及 [Connect](https://github.com/senchalabs/connect) 的團隊所撰寫,且 [Koa.js](https://github.com/koajs/koa/) 是一個分常輕量框架只有550行程式碼。
+[Koa.js](https://github.com/koajs/koa/) 是 Express 下一代的 web 框架，是由 [Express](https://github.com/strongloop/express) 及 [Connect](https://github.com/senchalabs/connect) 的團隊所撰寫,且 [Koa.js](https://github.com/koajs/koa/) 是一個分常輕量框架只有550行程式碼。
 
 [Koa.js](https://github.com/koajs/koa/)  大量運用到利用了 ES6 裡 Generator 新特性，Generator 可以減輕開發人員在流程管理上有更多的彈性，
 因為以往 JavaScript 在有很多 callback 時會成很多層的嵌套高山，會造成讓開發人員在處理上會難以掌握。
